@@ -1,3 +1,6 @@
+import Image from "next/image";
+import Link from "next/link";
+
 const PokemonSSR = ({ pokemons }) => {
   return (
     <>
@@ -7,11 +10,17 @@ const PokemonSSR = ({ pokemons }) => {
           pokemons.map((pokemon) => (
             <li key={pokemon.id}>
               {pokemon.name}
-              <img
-                src={pokemon.sprites.other.dream_world.front_default}
-                alt={`Pokemon ${pokemon.name} image`}
-                style={{ width: "20%" }}
-              />
+              <Link href={`/ssr/${pokemon.id}`}>
+                <a>
+                  <Image
+                    src={pokemon.sprites.other.dream_world.front_default}
+                    alt={`Pokemon ${pokemon.name} image`}
+                    width="200px"
+                    height="200px"
+                    placeholder="empty"
+                  />
+                </a>
+              </Link>
             </li>
           ))}
       </ul>
@@ -25,7 +34,6 @@ export const getServerSideProps = async () => {
     "https://pokemon-api-aleksandr.herokuapp.com/pokemon"
   );
   const pokemons = await response.json();
-  console.log("pokemons: ", pokemons);
   return {
     props: { pokemons },
   };
