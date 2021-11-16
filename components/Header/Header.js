@@ -5,23 +5,23 @@ const Header = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
       <Container>
-        <Navbar.Brand to="/main">JustR-Pokémon Next.js</Navbar.Brand>
+        <Navbar.Brand href="/">JustR-Pokémon Next.js</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <NavLink className={styles.headerNavlink} to="/CSR">
+            <NavLink href="csr" className={styles.headerNavlink}>
               Pokémon(CSR)
             </NavLink>
 
-            <NavLink className={styles.headerNavlink} to="/SSR">
+            <NavLink className={styles.headerNavlink} href="/ssr">
               Mis pokémon SSR
             </NavLink>
 
-            <NavLink className={styles.headerNavlink} to="/SSG">
+            <NavLink className={styles.headerNavlink} href="/ssg">
               Mis pokémon SSG
             </NavLink>
 
-            <NavLink className={styles.headerNavlink} to="/ISR">
+            <NavLink className={styles.headerNavlink} href="/isr">
               Mis pokémon ISR
             </NavLink>
           </Nav>
