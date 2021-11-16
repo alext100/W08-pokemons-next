@@ -1,5 +1,6 @@
 import { Container, Nav, Navbar, NavLink } from "react-bootstrap";
 import styles from "../../styles/Header.module.css";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -9,21 +10,18 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <NavLink href="csr" className={styles.headerNavlink}>
-              Pokémon(CSR)
-            </NavLink>
-
-            <NavLink className={styles.headerNavlink} href="/ssr">
-              Mis pokémon SSR
-            </NavLink>
-
-            <NavLink className={styles.headerNavlink} href="/ssg">
-              Mis pokémon SSG
-            </NavLink>
-
-            <NavLink className={styles.headerNavlink} href="/isr">
-              Mis pokémon ISR
-            </NavLink>
+            <Link href="/csr" passHref>
+              <NavLink className={styles.headerLink}>Pokémon (CSR)</NavLink>
+            </Link>
+            <Link href="/ssr" passHref>
+              <NavLink className={styles.headerLink}>Pokémon (SSR)</NavLink>
+            </Link>
+            <Link href="/csg" passHref>
+              <NavLink className={styles.headerLink}>Mis pokémon (SSG)</NavLink>
+            </Link>
+            <Link href="/isr" passHref>
+              <NavLink className={styles.headerLink}>Pokémon (ISR)</NavLink>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
