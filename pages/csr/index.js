@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -25,10 +26,12 @@ const PokemonCSR = () => {
           pokemons.map((pokemon) => (
             <li key={pokemon.id}>
               {pokemon.name}
-              <img
+              <Image
                 src={pokemon.sprites.other.dream_world.front_default}
                 alt={`Pokemon ${pokemon.name} image`}
-                style={{ width: "20%" }}
+                width="200px"
+                height="200px"
+                placeholder="empty"
               />
             </li>
           ))}
