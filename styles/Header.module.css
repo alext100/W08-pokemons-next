@@ -1,4 +1,4 @@
-.header-navlink {
+.headerNavlink {
   color: rgba(255, 255, 255, 0.55);
   padding-right: 0.5rem;
   padding-left: 0.5rem;
@@ -8,7 +8,7 @@
   transition: color 0.15s ease-in-out, border-color 0.15s ease-in-out,
     background-color 0.15s ease-in-out;
 }
-.header-navlink:hover {
+.headerNavlink:hover {
   color: rgba(255, 255, 255, 0.75);
 }
 .active {

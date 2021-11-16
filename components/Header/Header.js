@@ -1,5 +1,4 @@
 import { Container, Nav, Navbar, NavLink } from "react-bootstrap";
-/* import { NavLink } from "react-router-dom"; */
 import styles from "../../styles/Header.module.css";
 
 const Header = () => {
@@ -10,19 +9,19 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <NavLink className="header-navlink" to="/main">
+            <NavLink className={styles.headerNavlink} to="/CSR">
               Pokémon(CSR)
             </NavLink>
 
-            <NavLink className="header-navlink" to="/SSR">
+            <NavLink className={styles.headerNavlink} to="/SSR">
               Mis pokémon SSR
             </NavLink>
 
-            <NavLink className="header-navlink" to="/SSG">
+            <NavLink className={styles.headerNavlink} to="/SSG">
               Mis pokémon SSG
             </NavLink>
 
-            <NavLink className="header-navlink" to="/ISR">
+            <NavLink className={styles.headerNavlink} to="/ISR">
               Mis pokémon ISR
             </NavLink>
           </Nav>
