@@ -10,7 +10,7 @@ const PokemonSSG = ({ pokemons }) => {
           pokemons.map((pokemon) => (
             <li key={pokemon.id}>
               {pokemon.name}
-              <Link href={`/ssr/${pokemon.id}`}>
+              <Link href={`/ssg/${pokemon.id}`}>
                 <a>
                   <Image
                     src={pokemon.sprites.other.dream_world.front_default}

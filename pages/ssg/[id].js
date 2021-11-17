@@ -4,20 +4,20 @@ const PokemonSSGDetails = ({ pokemon }) => {
   return (
     <>
       <h1>{pokemon && pokemon.name}</h1>
-      <Image
+      {/*  <Image
         src={pokemon.sprites.other.dream_world.front_default}
         alt={`Pokemon ${pokemon.name} image`}
         width="200px"
         height="200px"
         placeholder="empty"
-      />
+      /> */}
     </>
   );
 };
 
 export default PokemonSSGDetails;
 
-export const getStaticPaths = async () => {
+/* export const getStaticPaths = async () => {
   const res = await fetch(
     "https://pokemon-api-aleksandr.herokuapp.com/pokemon/"
   );
@@ -41,4 +41,4 @@ export const getStaticProps = async ({ params }) => {
   return {
     props: { pokemon },
   };
-};
+}; */
