@@ -1,22 +1,20 @@
 import Image from "next/image";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const PokemonCSR = () => {
-  const [pokemonsList, setPokemonsList] = useState([]);
   const [pokemons, setPokemon] = useState([]);
 
   useEffect(() => {
     (async () => {
-      const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=10`);
+      const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=10");
       const { results } = await res.json();
-      setPokemonsList(results);
-      const urlList = pokemonsList.map((pokemon) => pokemon.url);
+      const urlList = results.map((pokemon) => pokemon.url);
       const result = await Promise.all(urlList.map((url) => fetch(url)));
       const pokemons = await Promise.all(result.map((res) => res.json()));
       setPokemon(pokemons);
+      return null;
     })();
-  }, [pokemons, pokemonsList]);
+  }, []);
 
   return (
     <>
