@@ -15,6 +15,8 @@ const PokemonSSGDetails = ({ pokemon }) => {
   );
 };
 
+export default PokemonSSGDetails;
+
 export const getStaticPaths = async () => {
   const res = await fetch(
     "https://pokemon-api-aleksandr.herokuapp.com/pokemon/"
@@ -40,5 +42,3 @@ export const getStaticProps = async ({ params }) => {
     props: { pokemon },
   };
 };
-
-export default PokemonSSGDetails;
