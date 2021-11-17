@@ -14,13 +14,13 @@ const Header = () => {
               <NavLink className={styles.headerLink}>Pokémon (CSR)</NavLink>
             </Link>
             <Link href="/ssr" passHref>
-              <NavLink className={styles.headerLink}>Pokémon (SSR)</NavLink>
+              <NavLink className={styles.headerLink}>Mis pokémon SSR</NavLink>
             </Link>
-            <Link href="/csg" passHref>
-              <NavLink className={styles.headerLink}>Mis pokémon (SSG)</NavLink>
+            <Link href="/ssg" passHref>
+              <NavLink className={styles.headerLink}>Mis pokémon SSG</NavLink>
             </Link>
             <Link href="/isr" passHref>
-              <NavLink className={styles.headerLink}>Pokémon (ISR)</NavLink>
+              <NavLink className={styles.headerLink}>Mis pokémon ISR</NavLink>
             </Link>
           </Nav>
         </Navbar.Collapse>

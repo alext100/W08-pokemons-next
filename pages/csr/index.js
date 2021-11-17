@@ -14,9 +14,9 @@ const PokemonCSR = () => {
       const urlList = pokemonsList.map((pokemon) => pokemon.url);
       const result = await Promise.all(urlList.map((url) => fetch(url)));
       const pokemons = await Promise.all(result.map((res) => res.json()));
-      setPokemon(pokemons, pokemonsList);
+      setPokemon(pokemons);
     })();
-  }, [pokemons]);
+  }, [pokemons, pokemonsList]);
 
   return (
     <>
